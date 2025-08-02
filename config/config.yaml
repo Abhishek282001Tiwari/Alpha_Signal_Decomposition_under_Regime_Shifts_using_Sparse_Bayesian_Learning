@@ -1,0 +1,175 @@
+data:
+  # Data collection settings
+  sources:
+    yahoo_finance: true
+    alpha_vantage: true
+    fred: true
+    quandl: false
+  
+  # API rate limits (requests per minute)
+  rate_limits:
+    yahoo_finance: 2000
+    alpha_vantage: 5
+    fred: 120
+    quandl: 10000
+  
+  # Universe definition
+  universe:
+    type: "custom"  # "sp500", "russell1000", "custom"
+    symbols: ["AAPL", "MSFT", "GOOGL", "AMZN", "TSLA", "META", "NVDA", "JPM", "JNJ", "V"]
+    min_market_cap: 1000000000  # $1B
+    min_trading_days: 252
+    exclude_sectors: []
+  
+  # Date ranges
+  backtest_start: "2020-01-01"
+  backtest_end: "2024-01-01"
+  min_history: 500  # days
+  
+  # Data quality
+  missing_data_threshold: 0.1  # 10%
+  outlier_method: "winsorize"
+  outlier_threshold: 3.0
+
+features:
+  # Technical indicators
+  technical:
+    enabled: true
+    lookback_periods: [5, 10, 20, 50, 100, 200]
+    volatility_windows: [5, 10, 20, 50]
+    momentum_periods: [1, 5, 10, 20, 50]
+    
+  # Cross-sectional features
+  cross_sectional:
+    enabled: true
+    ranking_periods: [5, 10, 20, 50]
+    sector_neutral: false
+    
+  # Fundamental features
+  fundamental:
+    enabled: true
+    announcement_lag: 45  # days
+    growth_periods: [1, 2, 3]  # years
+    
+  # Microstructure features
+  microstructure:
+    enabled: true
+    bid_ask_proxy: true
+    volume_analysis: true
+    
+  # Feature selection
+  selection:
+    method: "information_coefficient"
+    min_ic: 0.02
+    ic_lookback: 252
+    max_features: 50
+
+models:
+  # Regime detection
+  regime_detection:
+    method: "hidden_markov"  # "hidden_markov", "markov_switching", "threshold"
+    n_regimes: 3
+    features: ["vix", "returns", "volatility", "yield_curve"]
+    lookback_window: 252
+    
+  # Sparse Bayesian Learning
+  sparse_bayesian:
+    prior_type: "laplace"  # "laplace", "horseshoe", "spike_slab"
+    alpha_prior: 1.0
+    beta_prior: 1.0
+    max_iterations: 1000
+    convergence_threshold: 1e-6
+    
+  # Signal decomposition
+  signal_decomposition:
+    regime_dependent: true
+    regularization_strength: 0.1
+    cross_validation_folds: 5
+
+portfolio:
+  # Construction parameters
+  construction:
+    method: "long_short"  # "long_only", "long_short", "market_neutral"
+    max_positions: 50
+    position_size_method: "equal_weight"  # "equal_weight", "volatility_target", "kelly"
+    
+  # Risk management
+  risk:
+    max_portfolio_volatility: 0.15
+    max_position_weight: 0.05
+    max_sector_weight: 0.25
+    max_drawdown_limit: 0.10
+    
+  # Rebalancing
+  rebalancing:
+    frequency: "monthly"  # "daily", "weekly", "monthly"
+    transaction_costs: 0.001  # 10 bps
+    min_trade_size: 1000  # $1000
+
+backtesting:
+  # Performance metrics
+  metrics:
+    benchmark: "SPY"
+    risk_free_rate: 0.02
+    calculate_attribution: true
+    
+  # Simulation settings
+  simulation:
+    initial_capital: 1000000
+    margin_requirement: 0.5
+    borrowing_cost: 0.03
+    
+  # Output settings
+  output:
+    save_trades: true
+    save_positions: true
+    save_performance: true
+    generate_reports: true
+
+database:
+  # Connection settings
+  connection:
+    type: "postgresql"  # "postgresql", "sqlite"
+    host: "localhost"
+    port: 5432
+    database: "alpha_signals"
+    username: "postgres"
+    password: "${DB_PASSWORD}"
+    
+  # SQLite fallback
+  sqlite:
+    path: "data/alpha_signals.db"
+    
+  # Connection pool
+  pool:
+    size: 5
+    max_overflow: 10
+    recycle_time: 3600
+
+logging:
+  level: "INFO"  # "DEBUG", "INFO", "WARNING", "ERROR"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/alpha_signals.log"
+  max_file_size: "10MB"
+  backup_count: 5
+
+monitoring:
+  # Performance tracking
+  performance:
+    update_frequency: "daily"
+    alert_thresholds:
+      max_drawdown: 0.05
+      volatility_spike: 2.0
+      low_sharpe: 0.5
+      
+  # Data quality monitoring
+  data_quality:
+    check_frequency: "daily"
+    alert_on_missing_data: true
+    alert_on_outliers: true
+    
+  # Model monitoring
+  model:
+    performance_decay_threshold: 0.1
+    regime_stability_check: true
+    signal_correlation_monitor: true

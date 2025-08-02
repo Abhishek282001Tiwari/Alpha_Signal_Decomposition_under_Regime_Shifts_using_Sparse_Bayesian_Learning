@@ -1,0 +1,76 @@
+# Jekyll configuration for Alpha Signal Decomposition Project
+title: "Alpha Signal Decomposition"
+description: "Regime-Conditional Sparse Bayesian Learning for Financial Markets"
+baseurl: "/Alpha_Signal_Decomposition_under_Regime_Shifts_using_Sparse_Bayesian_Learning"
+url: "https://abhishek282001tiwari.github.io/Alpha_Signal_Decomposition_under_Regime_Shifts_using_Sparse_Bayesian_Learning"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-github-metadata
+
+# Collections
+collections:
+  methodology:
+    output: true
+    permalink: /:collection/:name/
+  results:
+    output: true
+    permalink: /:collection/:name/
+  documentation:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "methodology"
+    values:
+      layout: "page"
+
+# Custom variables
+research:
+  author: "Abhishek Tiwari"
+  institution: "Independent Researcher"
+  contact: "abhishekt282001@gmail.com"
+
+# GitHub repository info
+repository: Abhishek282001Tiwari/Alpha_Signal_Decomposition_under_Regime_Shifts_using_Sparse_Bayesian_Learning
+
+# Build settings
+safe: true
+incremental: false
+gist:
+  noscript: false
+
+# Exclude from processing
+exclude:
+  - src/
+  - tests/
+  - requirements.txt
+  - Dockerfile
+  - .gitignore
+  - README.md
+
+# Math rendering
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
+# MathJax configuration
+mathjax:
+  source: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  config: 'MathJax.tex.inlineMath=[["$","$"],["\\(","\\)"]]'
