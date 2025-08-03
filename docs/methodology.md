@@ -219,4 +219,10 @@ Where factor exposures $\beta_{f,t-1}$ are calculated at portfolio construction.
 - **Factor Shock**: Impact of specific risk factor movements
 - **Liquidity Stress**: Performance under constrained liquidity
 
+## Future Research Directions
+
+- Theoretical convergence analysis for regime-switching variational inference
+- Extension to high-frequency intraday regime detection
+- Causal inference applications in regime-conditional settings
+
 This methodology provides a comprehensive framework for generating robust alpha signals while managing risk in dynamic market environments. The combination of advanced machine learning, regime awareness, and rigorous backtesting ensures practical applicability in real-world investment contexts.
