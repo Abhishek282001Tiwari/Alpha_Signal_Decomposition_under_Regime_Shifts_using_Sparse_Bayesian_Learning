@@ -35,6 +35,25 @@ A sophisticated quantitative finance system that decomposes alpha signals into r
 - Ensemble approach with weighted regime probabilities
 - Dynamic regime transition detection
 
+## Research Contributions
+
+### Methodological Innovations
+- Regime-conditional sparse Bayesian learning for non-stationary financial time series
+- Hierarchical parameter linking across market regimes with cross-regime regularization
+- Dynamic feature selection with regime-aware importance weighting
+- Uncertainty quantification through variational Bayesian inference
+
+### Theoretical Framework
+- Extends classical sparse Bayesian learning to regime-switching environments
+- Provides mathematical foundation for regime-dependent regularization
+- Establishes convergence properties for variational inference under non-stationarity
+
+### Operations Research Applications
+- Stochastic optimization under regime uncertainty
+- Multi-stage decision making with regime transition costs
+- Robust portfolio optimization with parameter uncertainty
+- Applied probability models for financial regime detection
+
 ## Installation
 
 ### Prerequisites
@@ -302,7 +321,7 @@ If you use this work in academic research, please cite:
 
 ## Contact
 
-For technical support, collaboration, or institutional deployment inquiries:
+For technical support, collabration: 
 
 - **Author**: Abhishek Tiwari
 - **Email**: abhishekt282001@gmail.com
