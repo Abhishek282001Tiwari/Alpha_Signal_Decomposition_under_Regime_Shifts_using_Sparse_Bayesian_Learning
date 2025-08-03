@@ -73,12 +73,6 @@ This institutional-grade platform combines cutting-edge machine learning with ro
 - Theoretical framework for cross-regime parameter sharing
 - Empirical validation across multiple market cycles
 
-## Future Research Directions
-
-- Theoretical convergence analysis for regime-switching variational inference
-- Extension to high-frequency intraday regime detection
-- Causal inference applications in regime-conditional settings
-
 ## Results & Performance
 
 ### Key Metrics
