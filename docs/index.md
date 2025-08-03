@@ -122,6 +122,7 @@ Explore our comprehensive documentation:
 * [⚡ Implementation](https://abhishek282001tiwari.github.io/Alpha_Signal_Decomposition_under_Regime_Shifts_using_Sparse_Bayesian_Learning/implementation/) - Technical implementation details  
 * [📈 Results](https://abhishek282001tiwari.github.io/Alpha_Signal_Decomposition_under_Regime_Shifts_using_Sparse_Bayesian_Learning/results/) - Performance analysis and case studies
 * [📚 API Documentation](https://abhishek282001tiwari.github.io/Alpha_Signal_Decomposition_under_Regime_Shifts_using_Sparse_Bayesian_Learning/documentation/) - Complete API refrence
+  
 ---
 
 *This project represents cutting-edge research in quantitative finance, combining advanced machine learning techniques with practical portfolio management applications.*
