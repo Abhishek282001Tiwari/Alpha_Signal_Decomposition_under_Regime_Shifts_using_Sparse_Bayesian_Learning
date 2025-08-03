@@ -3,7 +3,6 @@ layout: home
 title: Alpha Signal Decomposition
 ---
 
-# Alpha Signal Decomposition
 ## Regime-Conditional Sparse Bayesian Learning for Financial Markets
 
 A sophisticated quantitative finance system that decomposes alpha signals into regime-dependent components using advanced Bayesian machine learning techniques.
