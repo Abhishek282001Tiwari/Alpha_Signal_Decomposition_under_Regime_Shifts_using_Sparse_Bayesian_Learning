@@ -4,6 +4,8 @@
 
 A sophisticated quantitative finance system that decomposes alpha signals into regime-dependent components using advanced sparse Bayesian learning techniques. This institutional-grade platform combines cutting-edge machine learning with robust financial engineering for comprehensive alpha generation and portfolio optimization.
 
+Quick Look at the webpage: https://abhishek282001tiwari.github.io/Alpha_Signal_Decomposition_under_Regime_Shifts_using_Sparse_Bayesian_Learning/
+
 ## Technical Architecture
 
 ### Core Components
