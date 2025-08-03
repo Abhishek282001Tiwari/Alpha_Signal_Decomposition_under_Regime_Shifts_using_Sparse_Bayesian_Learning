@@ -67,6 +67,18 @@ This institutional-grade platform combines cutting-edge machine learning with ro
 - Threshold Vector Autoregression for non-linear switching
 - Ensemble approach with weighted regime probabilities
 
+## Research Contributions
+
+- Novel regime-conditional sparse feature selection methodology
+- Theoretical framework for cross-regime parameter sharing
+- Empirical validation across multiple market cycles
+
+## Future Research Directions
+
+- Theoretical convergence analysis for regime-switching variational inference
+- Extension to high-frequency intraday regime detection
+- Causal inference applications in regime-conditional settings
+
 ## Results & Performance
 
 ### Key Metrics
@@ -112,10 +124,10 @@ alpha_signals = sbl_model.predict(new_data)
 
 Explore our comprehensive documentation:
 
-- [📖 Methodology](methodology.html) - Theoretical foundation and mathematical framework
-- [⚡ Implementation](implementation.html) - Technical implementation details
-- [📈 Results](results.html) - Performance analysis and case studies
-- [🔧 API Documentation](documentation.html) - Complete API reference
+- [📖 Methodology](https://abhishek282001tiwari.github.io/Alpha_Signal_Decomposition_under_Regime_Shifts_using_Sparse_Bayesian_Learning/methodology/) - Theoretical foundation and mathematical framework
+- [⚡ Implementation]([https://abhishek282001tiwari.github.io/Alpha_Signal_Decomposition_under_Regime_Shifts_using_Sparse_Bayesian_Learning/implementation/]) - Technical implementation details
+- [📈 Results]([https://abhishek282001tiwari.github.io/Alpha_Signal_Decomposition_under_Regime_Shifts_using_Sparse_Bayesian_Learning/results/]) -Performance analysis and case studies
+- [🔧 API Documentation](https://abhishek282001tiwari.github.io/Alpha_Signal_Decomposition_under_Regime_Shifts_using_Sparse_Bayesian_Learning/documentation/) - Complete API reference
 
 ---
 
