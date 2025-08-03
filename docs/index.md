@@ -119,8 +119,8 @@ alpha_signals = sbl_model.predict(new_data)
 Explore our comprehensive documentation:
 
 - [📖 Methodology](https://abhishek282001tiwari.github.io/Alpha_Signal_Decomposition_under_Regime_Shifts_using_Sparse_Bayesian_Learning/methodology/) - Theoretical foundation and mathematical framework
-- [⚡ Implementation]([https://abhishek282001tiwari.github.io/Alpha_Signal_Decomposition_under_Regime_Shifts_using_Sparse_Bayesian_Learning/implementation/]) - Technical implementation details
-- [📈 Results]([https://abhishek282001tiwari.github.io/Alpha_Signal_Decomposition_under_Regime_Shifts_using_Sparse_Bayesian_Learning/results/]) -Performance analysis and case studies
+- [⚡ Implementation](https://abhishek282001tiwari.github.io/Alpha_Signal_Decomposition_under_Regime_Shifts_using_Sparse_Bayesian_Learning/implementation/) - Technical implementation details
+- [📈 Results](https://abhishek282001tiwari.github.io/Alpha_Signal_Decomposition_under_Regime_Shifts_using_Sparse_Bayesian_Learning/results/) -Performance analysis and case studies
 - [🔧 API Documentation](https://abhishek282001tiwari.github.io/Alpha_Signal_Decomposition_under_Regime_Shifts_using_Sparse_Bayesian_Learning/documentation/) - Complete API reference
 
 ---
