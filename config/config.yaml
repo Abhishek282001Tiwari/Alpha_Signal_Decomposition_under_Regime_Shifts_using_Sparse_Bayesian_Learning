@@ -8,10 +8,10 @@ data:
   
   # API rate limits (requests per minute)
   rate_limits:
-    yahoo_finance: 2000
+    yahoo_finance: 60
     alpha_vantage: 5
     fred: 120
-    quandl: 10000
+    quandl: 60
   
   # Universe definition
   universe:
