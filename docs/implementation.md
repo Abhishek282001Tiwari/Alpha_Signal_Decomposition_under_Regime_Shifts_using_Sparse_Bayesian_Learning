@@ -12,17 +12,87 @@ The Alpha Signal Decomposition framework is built using a modular architecture t
 
 ```
 src/
-├── data/                   # Data collection and processing
-│   ├── collectors/         # Market, fundamental, macro data collectors
-│   ├── processors/         # Data validation and feature engineering
-│   └── storage/           # Database management and storage
-├── models/                # Core modeling components
-│   ├── sparse_bayesian/   # SBL implementation
-│   └── regime_detection/  # Regime switching models
-├── portfolio/             # Portfolio construction
-│   └── optimization/      # Risk management and optimization
-├── backtesting/           # Performance evaluation
-└── utils/                 # Utility functions
+├── __init__.py
+│
+├── data/
+│   ├── __init__.py
+│   ├── collectors/
+│   │   ├── __init__.py
+│   │   ├── market_collector.py
+│   │   ├── macro_collector.py
+│   │   └── fundamentals_collector.py
+│   │
+│   ├── processors/
+│   │   ├── __init__.py
+│   │   ├── cleaner.py
+│   │   ├── feature_engineering.py
+│   │   └── validator.py
+│   │
+│   └── storage/
+│       ├── __init__.py
+│       ├── database.py
+│       ├── parquet_store.py
+│       └── cache.py
+│
+├── models/
+│   ├── __init__.py
+│   │
+│   ├── sparse_bayesian/
+│   │   ├── __init__.py
+│   │   ├── base_sbl.py
+│   │   ├── sparse_bayesian_learner.py
+│   │   ├── priors.py
+│   │   └── posteriors.py
+│   │
+│   └── regime_detection/
+│       ├── __init__.py
+│       ├── base_regime.py
+│       ├── hmm_regime.py
+│       ├── switching_sbl.py
+│       └── regime_utils.py
+│
+├── portfolio/
+│   ├── __init__.py
+│   │
+│   ├── optimization/
+│   │   ├── __init__.py
+│   │   ├── base_optimizer.py
+│   │   ├── mean_variance.py
+│   │   ├── robust_optimization.py
+│   │   └── transaction_costs.py
+│   │
+│   ├── allocator.py
+│   └── constraints.py
+│
+├── backtesting/
+│   ├── __init__.py
+│   ├── engine.py
+│   ├── metrics.py
+│   ├── walk_forward.py
+│   └── performance_report.py
+│
+├── utils/
+│   ├── __init__.py
+│   ├── config_loader.py
+│   ├── logging.py
+│   ├── math_utils.py
+│   └── time_utils.py
+│
+├── config/
+│   ├── base.yaml
+│   ├── data.yaml
+│   ├── model.yaml
+│   └── backtest.yaml
+│
+├── tests/
+│   ├── __init__.py
+│   ├── test_data.py
+│   ├── test_models.py
+│   ├── test_portfolio.py
+│   └── test_backtesting.py
+│
+├── main.py
+└── __version__.py
 ```
 
 ## Core Components
